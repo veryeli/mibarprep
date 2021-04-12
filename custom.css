@@ -1,0 +1,33 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Corben', Georgia, Times, serif;
+    color: #3399ff;
+    text-shadow: 4px 4px 2px #ffccff;
+}
+p, div {
+    font-family: 'Nobile', Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: url(double-bubble-outline.png) repeat 0 0;
+    padding: 20px;
+
+}
+
+container, h1, h2, h3 {
+    margin-right: 10%;
+    margin-left: 10%;
+
+}
+
+
+.intro {
+    box-shadow: 0 0 1em 1em #ffccff;
+    padding: 10px;
+    background-color: white;
+}
+
+.text {
+    box-shadow: 0 0 1em 1em #ffccff;
+    padding: 10px;
+    background-color: white;
+}

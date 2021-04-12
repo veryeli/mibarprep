@@ -1,6 +1,6 @@
 from jinja2 import Environment, FileSystemLoader
 env = Environment(loader=FileSystemLoader(''))
-template = env.get_template('index.html')
+template = env.get_template('index_generator.html')
 
 
 coded = [
@@ -187,5 +187,5 @@ for item in coded:
 output_from_parsed_template = template.render(topics=topics)
 
 # to save the results
-with open("mypage.html", "w") as fh:
+with open("index.html", "w") as fh:
     fh.write(output_from_parsed_template)

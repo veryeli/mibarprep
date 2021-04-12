@@ -2,35 +2,53 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="http://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css">
+ <link href="http://fonts.googleapis.com/css?family=Nobile" rel="stylesheet" type="text/css">
+  <link href="custom.css" rel="stylesheet" type="text/css">
+
     <title>MIBarPrepBuddy</title>
 </head>
 <body>
-<div class="col">
-    <title>Michigan Bar Prep Essays by year</title>
-    <container>
-        <p>Hi! I'm another 3L studying for the Michigan bar and I decided to organize all the essays by subject. Then I thought, why not share my work? It's pretty annoying if you want to study Creditors' Rights or whatever to wade through everything.
+
+
+
+
+        <h1>Michigan Bar Prep Essays by year</h1>
+        <container>
+        <div class="intro col-md-6 offset-md-3">
+        <p>Hi! I'm another 3L studying for the Michigan bar and I decided to organize all the essays by subject. Then I thought, why not share my work? It's pretty annoying if you want to study Creditors' Rights or whatever to wade through every test ever.
         </p>
 
         <p>
-            So here's all the questions and answers (starting in 2015, go back to 2009 next time I sit down to work on this) organized by topic. As I study, I'll add more resources.  I might also pull together outlines of each topic that just consist of the law inferred from the test answers. If anyone using this resource has any links you want to share, or if you've manually copied out a question or response already, or you have the topic coding for an earlier year, email me at e.feasley@gmail.com.
+            So here's all the questions and answers (starting in 2015) organized by topic. I'd really like to add more resources (outlines, the rest of the tests so if you have any resources or capacity to help, *please* reach out - e.feasley@gmail.com)
+        </p>
+
+        <p>
+            All of these materials are from the Michigan Bar (thanks!) and are available <a href='https://courts.michigan.gov/Courts/MichiganSupremeCourt/BLE/pages/admission-to-the-bar.aspx#test'>here</a>.
         </p>
         <p>
-            The Michigan website has every exam is available from 2009 - 2020, and my plan is to link to the essays in reverse chronological order.
+            Some other free resources are <a href='http://passthebar.com/'>Pass the Bar</a> and Themis's First and Second year essentials. Not free, but a lot of people on reddit seem to like 'Emanuel’s Strategies & Tactics for the MBE' and the 'Critical Pass' cards which are both available on ebay. Honestly I think it's pretty much a travesty that the NCBE doesn't release more practice questions etc. for free. I'm using a paid prep service but if anyone wants to share free resources they're using, I'd love to post them.
         </p>
+        </div>
 
     </container>
 
+
+        <h2>Topics</h2>
     <container>
+        <div class='row'>
 
         {% for t in topics %}
-
-            <h2> {{t.topic}} </h2>
+            <div class='col-md-4'>
+            <h3> {{t.topic}} </h3>
+            <div class='text'>
             {% for question in t.links %}
                 <a href={{question.link}}>{{question.test_name}}</a> ||| <a href={{question.analysis}}>Analysis</a><br>
             {% endfor %}
-
-
+        </div>
+            </div>
         {% endfor %}
+    </div>
     </container>
 </div>
 </body>
