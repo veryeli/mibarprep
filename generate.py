@@ -1,11 +1,13 @@
 from jinja2 import Environment, FileSystemLoader
+from rules import case_codes, rules_from_essays
+from collections import Counter, defaultdict
 env = Environment(loader=FileSystemLoader(''))
 template = env.get_template('index_generator.html')
 
 
 coded = [
 {"Agency": ['F2014', 'F1602', 'F1910', 'J1602', 'J1815']},
-{"Civil Procedure": ['J1512',
+{"Civil Practice and Procedure": ['J1512',
  'J1603',
  'F1603',
  'F1808',
@@ -17,8 +19,8 @@ coded = [
  'F1715',
  'J1715',
  'F1502']},
-{"Commercial Paper/Negotiable Instruments": ["J1907"]},
-{"Conflict of Laws": ['F1805', 'J1809', 'J1908', 'F1605', 'F1703']},
+{"Negotiable Instruments": ["J1907"]},
+{"Choice of Law": ['F1805', 'J1809', 'J1908', 'F1605', 'F1703']},
 {"Constitutional Law": ['J1914',
  'F1507',
  'F1712',
@@ -73,7 +75,7 @@ coded = [
  'J1913',
  'J2012',
  'J1704', 'F1509', 'F1711', 'J1509', 'J1613']},
-{"Domestic Relations (Family Law)": ['F1514',
+{"Domestic Relations": ['F1514',
  'F1606',
  'F1701',
  'J1515',
@@ -149,7 +151,7 @@ coded = [
  'J1708',
  'J1801',
  'J1903']},
-{"Workers’ Compensation": [
+{"Workers’ Comp": [
     "J1513",
     "F1804",
     "F1702",
@@ -189,3 +191,29 @@ output_from_parsed_template = template.render(topics=topics)
 # to save the results
 with open("index.html", "w") as fh:
     fh.write(output_from_parsed_template)
+
+
+
+for topic in topics:
+    rules = []
+    for essay in rules_from_essays:
+        if essay in topic['links']:
+            rules += rules_from_essays[essay]
+            rule_accumulator = Counter([_[0] if type(_) == tuple else _ for _ in rules])
+            source_accumulator = defaultdict(set)
+            for rule in rules:
+                if type(rule) == str:
+                    continue
+                for source in rule[1:]:
+                    source_accumulator[rule[0]].add(case_codes.get(source, source))
+
+
+
+
+# for each topic
+# for each case in rules
+# if the case is in the topic
+# count the number of time each rule occurs
+# for each number in the count
+#
+#
