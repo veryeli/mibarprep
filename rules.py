@@ -1,35 +1,101 @@
 case_codes = {
     'Allard': """Allard v Allard, 318 Mich App 583 (2017)""",
+    'Bonelli': "Bonelli v Volkswagen of Am, Inc, 166 Mich App 483 (1988)",
     'Byker': """Byker v Mannes, 465 Mich 637 (2002)""",
+    'Casey': "Casey v Auto Owners Ins Co, 273 Mich App 388 (2006)",
     'Central Wholesale': """Central Wholesale Co v Sefa, 351 Mich 17 (1957)""",
     'Cole': """Cole v Cole, 289 Mich 202 (1939)""",
+    'Corl': """Corl v Huron Castings, Inc, 450 Mich 620 (1996)""",
     'Dumas': """Dumas v Auto Club Ins Ass’n, 437 Mich 521 (1991)""",
     'Eastman': """Eastman v Univ of Mich, 30 F3d 670 (CA 6, 1994)""",
     'Falkner': """Falkner v Falkner, 24 Mich App 633 (1970)""",
     'Farm Bureau': """Farm Bureau Ins Co v TNT Equip, Inc, 328 Mich App 667 (2019)""",
+    'Farm Credit': """Farm Credit Servs, PCA v Weldon, 232 Mich App 662 (1998)""",
+    "Frank W Lynch": "Frank W Lynch & Co v Flex Technologies, 463 Mich 578 (2001)",
     'Grosberg': """Grosberg v Michigan Nat Bank Oakland, 113 Mich App 610 (1982)""",
     'Hertz': """Hertz Corp v Friend, 559 US 77 (2010)""",
     'Ingham': """Co of Ingham v Mich Co Rd Comm’n Self-Insurance Pool, 329 Mich App 295, ___ (2019)""",
+    'Kewin': "Kewin v Mass Mut Life Ins Co, 409 Mich 401, 414 (1980)",
     'Kisiel': """Kisiel v Holz, 272 Mich App 168 (2006)""",
     'Krause': """Krause v Boraks, 341 Mich 149 (1954)""",
     'Koenig': """Koenig v City of South Haven, 460 Mich 667 (1999)""",
+    'Lawrence': """Lawrence v Will Darrah & Assocs, Inc, 445 Mich 1 (1994)""",
     'LeBlanc': """LeBlanc v Cleveland, 248 F3d 95 (CA 2, 2001).""",
     'Lobato': """Lobato v Paulino, 304 Mich 668 (1943)""",
+    'Lorenz': """Lorenz Supply Co v Am Standard, Inc, 100 Mich App 600 (1980), aff’d, 419 Mich 610 (1984)""",
     'Logan': """Logan v Manpower of Lansing, Inc, 304 Mich App 550 (2014)""",
     'Maids': """Maids Int’l, Inc v Saunders, Inc, 224 Mich App 508 (1997)""",
     'Meretta': """ Meretta v Peach, 195 Mich App 695 (1992)""",
     'Mitchell': """Mitchell v US, 88 US 350 (1874)""",
+    'Morris': """Morris v Clawson Tank Co, 459 Mich 256 (1998)""",
     'Peeples': """Peeples v City of Detroit, 99 Mich App 285 (1980)""",
+    'Port Huron': """Port Huron Educ Ass’n, MEA/NEA v Port Huron Area Sch Dist, 452 Mich 309 (1996)""",
     'Rehab': """Prof Rehab Assocs v State Farm Mut Auto Ins Co, Mich App 167 (1998)""",
     'Rory': """Rory v Continental Ins Co, 473 Mich 457 (2005)""",
     'Schmalfeldt': """Schmalfeldt v North Pointe Ins Co, 469 Mich 422 (2003)""",
     'Shay': """Shay v Aldrich, 487 Mich 648 (2010)""",
     'St Paul': """St Paul Mercury Indemnity Co v Red Cab Co, 303 US 283 (1938)""",
+    'Valentine': """Valentine v Gen Am Credit, Inc, 420 Mich 256, 263 (1984) """,
     'Von Dunser': """Von Dunser v Aronoff, 915 F2d 1071 (CA 6, 1990)""",
+    'Quality': """” Quality Prods & Concepts Co v Nagel Precision, Inc, 469 Mich 362 (2003)""",
 }
 
 
 rules_from_essays = {
+'F2013': [
+("""“A party alleging waiver or modification must establish a
+mutual intention of the parties to waive or modify the original
+contract. “[I]n the
+same way a meeting of the minds is necessary to create a binding
+contract, so also is a meeting of the minds necessary to modify
+the contract after it has been made.""", 'Quality', 'Port Huron'),
+("""Simply put, one cannot
+unilaterally modify a contract because by definition, a unilateral
+modification lacks mutuality.""", 'Quality'),
+("""This mutuality requirement is satisfied where a waiver or
+modification is established through clear and convincing evidence
+of a written agreement, oral agreement, or affirmative conduct
+establishing mutual agreement to modify or waive the particular
+original contract.""", 'Quality'),
+("""Where one person has committed
+a tort, breach of contract, or other legal wrong against another,
+it is incumbent upon the latter to use such means as are reasonable
+under the circumstances to avoid or minimize the damages. The
+person wronged cannot recover for any item of damage which could
+thus have been avoided.""", 'Morris'),
+("""At common law a plaintiff has a duty to mitigate his loss. It has long been recognized that the law
+should encourage a potential plaintiff to take reasonable actions
+to minimize the extent of damages arising from the wrongful breach
+of a contract.""", 'Lawrence', 'Farm Credit'),
+("""“[T]he damages recoverable for breach of contract are those
+that arise naturally from the breach or those that were in the
+contemplation of the parties at the time the contract was made.” """, 'Kewin'),
+("""Lost profits resulting from a breach of contract
+are proper items of loss to be considered in determining
+damages.""", 'Lorenz'),
+("""Lost profits are
+recoverable if the defendants reasonably knew or should have known
+that in the event of breach this plaintiff would lose profits.""", 'Lawrence'),
+("""Even where lost profits are difficult to calculate and are
+speculative to some degree, they are still allowed as a loss item.""", 'Bonelli'),
+("""Michigan case law indicates that doubts as to the
+certainty of damages must be resolved against the wrongdoer.""", 'Lorenz'),
+("""Courts apply an “objective
+standard” of foreseeability, under which damages are recoverable
+if “the defendants reasonably knew or should have known that in
+the event of breach,” such damages would result.""", 'Lawrence'),
+("""Punitive damages are
+not available for breach of contract. Punitive damages in the absence of a statutory authorization are
+not recoverable in Michigan.""", 'Casey'),
+("""The goal in contract law
+is not to punish the breaching party, but to make the nonbreaching
+party whole.""", 'Corl'),
+("""Absent allegation and proof of tortious conduct
+existing independent of the breach, exemplary damages may not be
+awarded in common-law actions brought for breach of a commercial
+contract.""", "Kewin", 'Valentine'),
+
+],
  'F1713': [
     ("""A partnership is an association of two or more persons to be the co-owners of a business for profit.""",
         "MCL 449.6(1)"),
