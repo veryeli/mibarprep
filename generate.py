@@ -7,7 +7,7 @@ template = env.get_template('index_generator.html')
 
 coded = [
 {"Agency": ['F2014', 'F1602', 'F1910', 'J1602', 'J1815']},
-{"Civil Practice and Procedure": ['J1512',
+{"Civ Pro": ['J1512',
  'J1603',
  'F1603',
  'F1808',
@@ -21,7 +21,7 @@ coded = [
  'F1502']},
 {"Negotiable Instruments": ["J1907"]},
 {"Choice of Law": ['F1805', 'J1809', 'J1908', 'F1605', 'F1703']},
-{"Constitutional Law": ['J1914',
+{"Con Law": ['J1914',
  'F1507',
  'F1712',
  'J1508',
@@ -54,7 +54,7 @@ coded = [
  'J1910',
  'J2010']
 },
-{"Creditors’ Rights": ['F1708', 'F1802', 'J1701', 'J1905']},
+{"Creditors' Rights": ['F1708', 'F1802', 'J1701', 'J1905']},
 {"Criminal Law": ['F1508',
  'F1610',
  'F1710',
@@ -66,7 +66,7 @@ coded = [
  'J1811',
  'J1915',
  'J2015']},
-{"Criminal Procedure": ['F1612',
+{"Crim Pro": ['F1612',
  'F1815',
  'F1904',
  'F2007',
@@ -114,7 +114,7 @@ coded = [
  'J1803',
  'J1901',
  'J2006']},
-{"Professional Responsibility": ['F1504', 'F1608', 'J1506', 'J1605']},
+{"Prof Responsibility": ['F1504', 'F1608', 'J1506', 'J1605']},
 {"Real Property": ['F1512',
  'F1613',
  'F1706',
@@ -128,7 +128,7 @@ coded = [
  'J1902',
  'J1612']},
 {"Sales": ['F1513', 'J1514', 'J1608', 'J1807', 'J2005']},
-{"Secured Transactions": ["F1604", "J1711"]},
+{"Secured Trans": ["F1604", "J1711"]},
 {"Torts": ['J1510',
  'F1501',
  'F1601',
@@ -151,7 +151,7 @@ coded = [
  'J1708',
  'J1801',
  'J1903']},
-{"Workers’ Comp": [
+{"Workers' Comp": [
     "J1513",
     "F1804",
     "F1702",
@@ -161,14 +161,28 @@ coded = [
 ]},
 ]
 
+
+slugs = {k[0]: k[0].lower().replace(' ', '-').replace("'", '') for k in [[_ for _ in _.keys()] for _ in coded]}
+
+def url_for(essay):
+    return 'pdfs/' + essay + '.pdf'
+
+def name_of(essay):
+    month = 'Feb' if essay[0] == 'F' else 'Jul'
+    year = '20' + essay[1:3]
+    return month + ' ' + year
+
+def sort_key(essay):
+    month = 'Feb' if essay[0] == 'F' else 'Jul'
+    year = '20' + essay[1:3]
+    return year + ('2' if month == 'Feb' else '7')
+
 def get_render_info(item):
     res = {}
-    res['link'] = 'pdfs/' + item + '.pdf'
+    res['link'] = url_for(item)
     res['analysis'] = 'pdfs/' + item + 'A.pdf'
-    month = 'Feb' if item[0] == 'F' else 'Jul'
-    year = '20' + item[1:3]
-    res['test_name'] = month + ' ' + year
-    res['sortkey'] = year + ('2' if month == 'Feb' else '7')
+    res['test_name'] = name_of(item)
+    res['sortkey'] = sort_key(item)
     return res
 
 
@@ -178,6 +192,7 @@ for item in coded:
     for k, v in item.items():
         topic = {}
         topic['topic'] = k
+        topic['slug'] = slugs[k]
         topic['links'] = []
         for item in v:
             topic['links'].append(get_render_info(item))
@@ -192,20 +207,54 @@ output_from_parsed_template = template.render(topics=topics)
 with open("index.html", "w") as fh:
     fh.write(output_from_parsed_template)
 
-
-
-for topic in topics:
+topic_render = {}
+for item in coded:
+    topic = [_ for _ in item.keys()][0]
+    tests = item[topic]
+    topic_render['topic'] = topic
     rules = []
+    coded_so_far = []
+    source_accumulator = defaultdict(set)
+    source_numberer = {}
+    numbers = []
     for essay in rules_from_essays:
-        if essay in topic['links']:
+        if essay in tests:
+            coded_so_far.append({'test': name_of(essay), 'url': url_for(essay)})
             rules += rules_from_essays[essay]
             rule_accumulator = Counter([_[0] if type(_) == tuple else _ for _ in rules])
-            source_accumulator = defaultdict(set)
             for rule in rules:
                 if type(rule) == str:
                     continue
                 for source in rule[1:]:
-                    source_accumulator[rule[0]].add(case_codes.get(source, source))
+                    source = case_codes.get(source, source)
+                    if source not in source_numberer:
+                        source_numberer[source] = len(source_numberer)
+                    source_accumulator[rule[0]].add(source_numberer[source])
+
+
+
+
+    template = env.get_template('topic_generator.html')
+    rules = [{'rule': r[0],
+            'sources': [
+            {
+                'num': _,
+                'slug': '#num%03d' % _
+            }
+            for _ in
+            source_accumulator[r[0]]
+            ]
+    } for r in rules]
+    numbers = [(v, k) for k, v in source_numberer.items()]
+    numbers.sort()
+    numbers = [{'slug': 'num%03d' % _[0], 'text': _[1], 'num': _[0]} for _ in numbers]
+
+    output_from_parsed_template = template.render(
+        topic=topic, rules=rules, sources=numbers,
+        coded_so_far=coded_so_far)
+    with open(slugs[topic] + '.html', 'w') as fh:
+        fh.write(output_from_parsed_template)
+
 
 
 

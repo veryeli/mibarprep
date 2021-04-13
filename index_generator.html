@@ -36,7 +36,7 @@
 
         {% for t in topics %}
             <div class='col-md-4'>
-            <h3> {{t.topic}} </h3>
+            <h3> <a href={{t.slug}}.html>{{t.topic}}</a></h3>
             <div class='text'>
             {% for question in t.links %}
                 <a href={{question.link}}>{{question.test_name}}</a> ||| <a href={{question.analysis}}>Analysis</a><br>

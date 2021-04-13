@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="http://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css">
+ <link href="http://fonts.googleapis.com/css?family=Nobile" rel="stylesheet" type="text/css">
+  <link href="custom.css" rel="stylesheet" type="text/css">
+
+    <title>{{topic}}</title>
+</head>
+
+        <h1>{{topic}}</h1>
+        Coded so far:
+        {% for test in coded_so_far %}
+        <br>
+            <a href={{test.url}}> {{test.test}}</a>
+        {% endfor %}
+
+    <container>
+        <div class='row'>
+        {% for rule in rules %}
+            <p>
+                {{rule.rule}}
+                {% for source in rule.sources %}
+                    <a href={{source.slug}}>{{source.num}}</a>
+                {% endfor %}
+            </p>
+            {% endfor %}
+    </div>
+    {% for source in sources %}
+        <p id={{source.slug}}>
+            <b>{{source.num}}</b> {{source.text}}
+        </p>
+    {% endfor %}
+    </container>
+</div>
+</body>
+</html>
