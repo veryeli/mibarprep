@@ -4,22 +4,28 @@ case_codes = {
     'Central Wholesale': """Central Wholesale Co v Sefa, 351 Mich 17 (1957)""",
     'Cole': """Cole v Cole, 289 Mich 202 (1939)""",
     'Dumas': """Dumas v Auto Club Ins Ass’n, 437 Mich 521 (1991)""",
+    'Eastman': """Eastman v Univ of Mich, 30 F3d 670 (CA 6, 1994)""",
     'Falkner': """Falkner v Falkner, 24 Mich App 633 (1970)""",
     'Farm Bureau': """Farm Bureau Ins Co v TNT Equip, Inc, 328 Mich App 667 (2019)""",
     'Grosberg': """Grosberg v Michigan Nat Bank Oakland, 113 Mich App 610 (1982)""",
+    'Hertz': """Hertz Corp v Friend, 559 US 77 (2010)""",
     'Ingham': """Co of Ingham v Mich Co Rd Comm’n Self-Insurance Pool, 329 Mich App 295, ___ (2019)""",
     'Kisiel': """Kisiel v Holz, 272 Mich App 168 (2006)""",
     'Krause': """Krause v Boraks, 341 Mich 149 (1954)""",
     'Koenig': """Koenig v City of South Haven, 460 Mich 667 (1999)""",
+    'LeBlanc': """LeBlanc v Cleveland, 248 F3d 95 (CA 2, 2001).""",
     'Lobato': """Lobato v Paulino, 304 Mich 668 (1943)""",
     'Logan': """Logan v Manpower of Lansing, Inc, 304 Mich App 550 (2014)""",
     'Maids': """Maids Int’l, Inc v Saunders, Inc, 224 Mich App 508 (1997)""",
     'Meretta': """ Meretta v Peach, 195 Mich App 695 (1992)""",
+    'Mitchell': """Mitchell v US, 88 US 350 (1874)""",
     'Peeples': """Peeples v City of Detroit, 99 Mich App 285 (1980)""",
     'Rehab': """Prof Rehab Assocs v State Farm Mut Auto Ins Co, Mich App 167 (1998)""",
     'Rory': """Rory v Continental Ins Co, 473 Mich 457 (2005)""",
     'Schmalfeldt': """Schmalfeldt v North Pointe Ins Co, 469 Mich 422 (2003)""",
     'Shay': """Shay v Aldrich, 487 Mich 648 (2010)""",
+    'St Paul': """St Paul Mercury Indemnity Co v Red Cab Co, 303 US 283 (1938)""",
+    'Von Dunser': """Von Dunser v Aronoff, 915 F2d 1071 (CA 6, 1990)""",
 }
 
 
@@ -136,10 +142,51 @@ authorized to perform in behalf of the principal the
 particular act, and such particular act has been
 performed . . . """, 'Meretta', 'Central Wholesale')
 
+    ],
+    'J2004': [
+        ("""Federal courts are courts of limited
+jurisdiction, meaning they can only hear actions authorized by the
+United States Constitution or federal statutes."""),
+        ("""The two primary
+categories of federal subject matter jurisdiction are when (1)
+there is a either a federal question asserted in a well-pleaded
+complaint that seeks a remedy based on the federal question or (2)
+there is complete diversity of jurisdiction, which requires that
+the action be between citizens of different states and the amount
+in controversy exceeds $75,000. For “complete diversity” to exist,
+no plaintiff can be a citizen of the same state of any defendant. """, "28 USC § 1332"),
+        ("""When determining an individual’s citizenship, a court will
+look to the person’s domicile at the time the action was filed."""),
+        (""" A
+person can have only one domicile for purposes of diversity
+jurisdiction.""", 'Eastman'),
+        ("""A previous domicile cannot be lost until another is adequately
+established""", 'Mitchell'),
+        ("""Establishment
+of a new domicile, for diversity jurisdiction purposes, is
+determined by two factors: (1) residence in the new domicile, and
+(2) intention to remain there.""", 'Von Dunser'),
+        ("""Diversity is determined at the time that the action is filed, and
+based on the residency of the parties at that time. A change in
+domicile by a party after that date does not destroy diversity. """,
+'LeBlanc'),
+        ("""Unlike an individual, a corporation is a citizen where it is
+incorporated and where it has its principal place of business. """, '28 USC § 1332(c)(1)'),
+        (""" A corporation’s
+“principal place of business” for purposes of federal diversity
+jurisdiction refers to “the place where the corporation’s highlevel officers direct, control, and coordinate the corporation’s
+activities.” """, 'Hertz'),
+        ("""In determining the
+amount in controversy, courts will accept the plaintiff’s good
+faith allegations as to damages unless it appears to a legal
+certainty that the plaintiff cannot recover that amount.""", 'St Paul'),
+        (""" Federal courts have
+subject matter jurisdiction to hear claims that “arise under” the
+Constitution or other federal laws.""", '28 USC § 1331')
+    ],
 
 
 
 
 
-    ]
  }

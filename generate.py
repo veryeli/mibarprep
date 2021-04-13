@@ -244,7 +244,13 @@ for item in coded:
             for _ in
             source_accumulator[r[0]]
             ]
-    } for r in rules]
+    } if type(r) == tuple else
+
+    {
+        'rule': r,
+        'sources': []
+    }
+    for r in rules]
     numbers = [(v, k) for k, v in source_numberer.items()]
     numbers.sort()
     numbers = [{'slug': 'num%03d' % _[0], 'text': _[1], 'num': _[0]} for _ in numbers]
