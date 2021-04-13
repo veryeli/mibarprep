@@ -1,6 +1,8 @@
 case_codes = {
+    "Frank W Lynch": "Frank W Lynch & Co v Flex Technologies, 463 Mich 578 (2001)",
     'Allard': """Allard v Allard, 318 Mich App 583 (2017)""",
     'Bonelli': "Bonelli v Volkswagen of Am, Inc, 166 Mich App 483 (1988)",
+    'Burney': """Burney v P V Holding Corp, 218 Mich App 167 (1996)""",
     'Byker': """Byker v Mannes, 465 Mich 637 (2002)""",
     'Casey': "Casey v Auto Owners Ins Co, 273 Mich App 388 (2006)",
     'Central Wholesale': """Central Wholesale Co v Sefa, 351 Mich 17 (1957)""",
@@ -11,25 +13,32 @@ case_codes = {
     'Falkner': """Falkner v Falkner, 24 Mich App 633 (1970)""",
     'Farm Bureau': """Farm Bureau Ins Co v TNT Equip, Inc, 328 Mich App 667 (2019)""",
     'Farm Credit': """Farm Credit Servs, PCA v Weldon, 232 Mich App 662 (1998)""",
-    "Frank W Lynch": "Frank W Lynch & Co v Flex Technologies, 463 Mich 578 (2001)",
+    'Gasper': " People of City of Grand Rapids v Gasper, 314 Mich App 528 (2016)",
+    'Greyned': "Grayned v City of Rockford, 408 US 104,108-109 (1972)",
+    'Frydrych': """Frydrych v Wentland, 252 Mich App 360 (2002)""",
     'Grosberg': """Grosberg v Michigan Nat Bank Oakland, 113 Mich App 610 (1982)""",
+    'Hall': "Hall v General Motors Corp, 229 Mich App 580 (1998)",
     'Hertz': """Hertz Corp v Friend, 559 US 77 (2010)""",
+    'Howell': "People v Howell, 396 Mich 16 (1976)",
     'Ingham': """Co of Ingham v Mich Co Rd Comm’n Self-Insurance Pool, 329 Mich App 295, ___ (2019)""",
     'Kewin': "Kewin v Mass Mut Life Ins Co, 409 Mich 401, 414 (1980)",
     'Kisiel': """Kisiel v Holz, 272 Mich App 168 (2006)""",
-    'Krause': """Krause v Boraks, 341 Mich 149 (1954)""",
     'Koenig': """Koenig v City of South Haven, 460 Mich 667 (1999)""",
+    'Kolender': "Kolendar v Lawson, 461 US 352 (1983)",
+    'Krause': """Krause v Boraks, 341 Mich 149 (1954)""",
     'Lawrence': """Lawrence v Will Darrah & Assocs, Inc, 445 Mich 1 (1994)""",
     'LeBlanc': """LeBlanc v Cleveland, 248 F3d 95 (CA 2, 2001).""",
+    'Lino': "People v Lino, 447 Mich 567 (1994)",
     'Lobato': """Lobato v Paulino, 304 Mich 668 (1943)""",
-    'Lorenz': """Lorenz Supply Co v Am Standard, Inc, 100 Mich App 600 (1980), aff’d, 419 Mich 610 (1984)""",
     'Logan': """Logan v Manpower of Lansing, Inc, 304 Mich App 550 (2014)""",
+    'Lorenz': """Lorenz Supply Co v Am Standard, Inc, 100 Mich App 600 (1980), aff’d, 419 Mich 610 (1984)""",
     'Maids': """Maids Int’l, Inc v Saunders, Inc, 224 Mich App 508 (1997)""",
     'Meretta': """ Meretta v Peach, 195 Mich App 695 (1992)""",
     'Mitchell': """Mitchell v US, 88 US 350 (1874)""",
     'Morris': """Morris v Clawson Tank Co, 459 Mich 256 (1998)""",
     'Peeples': """Peeples v City of Detroit, 99 Mich App 285 (1980)""",
     'Port Huron': """Port Huron Educ Ass’n, MEA/NEA v Port Huron Area Sch Dist, 452 Mich 309 (1996)""",
+    'Quality': """Quality Prods & Concepts Co v Nagel Precision, Inc, 469 Mich 362 (2003)""",
     'Rehab': """Prof Rehab Assocs v State Farm Mut Auto Ins Co, Mich App 167 (1998)""",
     'Rory': """Rory v Continental Ins Co, 473 Mich 457 (2005)""",
     'Schmalfeldt': """Schmalfeldt v North Pointe Ins Co, 469 Mich 422 (2003)""",
@@ -37,11 +46,67 @@ case_codes = {
     'St Paul': """St Paul Mercury Indemnity Co v Red Cab Co, 303 US 283 (1938)""",
     'Valentine': """Valentine v Gen Am Credit, Inc, 420 Mich 256, 263 (1984) """,
     'Von Dunser': """Von Dunser v Aronoff, 915 F2d 1071 (CA 6, 1990)""",
-    'Quality': """” Quality Prods & Concepts Co v Nagel Precision, Inc, 469 Mich 362 (2003)""",
 }
 
 
 rules_from_essays = {
+'J2003': [
+("""A constitutional challenge of an ordinance or an enactment
+based on vagueness is brought under the Due Process Clause of the
+14th Amendment of the United States Constitution.""", 'Lino', 'Gasper', 'Const 1963, art 1, § 17'),
+("""An ordinance or enactment is “void for vagueness” if what it
+prohibits is “not clearly defined.”""", 'Gasper', 'Grayned'),
+(""" An
+ordinance must define the offense “with sufficient definiteness
+that ordinary people can understand what conduct is prohibited and
+in a manner that does not encourage arbitrary and discriminatory
+enforcement.”""", 'Kolender', 'Lino'),
+("""A person of ordinary intelligence should have a
+“reasonable opportunity to know what is prohibited” so he or she
+may act accordingly. """, 'Gasper', "Grayned"),
+("""There are generally three ways an enactment (ordinance) can
+be void for vagueness using the same criteria used to construe
+statutes. These
+are:
+1. It does not provide fair notice of the conduct
+proscribed.
+2. It confers on the trier of fact unstructured and
+unlimited discretion to determine whether an offense
+has been committed.
+3. Its coverage is overbroad and impinges on First
+Amendment freedoms.""", 'Lino', 'Kolender', 'Howell'),
+("""There is the additional danger that a person may steer far
+wider of the unlawful zone than if the boundaries of the forbidden
+areas were clearly marked.""", 'Gasper', 'Grayned'),
+("""A challenge for vagueness not on First Amendment grounds is
+“examined in light of the facts of each particular case.”""", 'Howell', 'Lino'),
+("""A ordinance can be void for vaugeness if it
+    1. It does not provide sufficient notice as to what
+conduct is required or prohibited; or
+2. It allows arbitrary and discriminatory enforcement
+by the code enforcement officer.
+""", "Gasper")
+],
+'J1908': [
+("""In tort cases, Michigan courts use a choice-of-law analysis
+called ‘interest analysis’ to determine which state's law governs
+a suit where more than one state’s law may be implicated. Under this
+analysis, Michigan courts will apply Michigan law unless a
+‘rational reason’ to do otherwise exists.""", 'Hall', 'Frydrych'),
+("""In performing the interest analysis, the court first examines
+whether any foreign state has an interest in having its law apply.""", 'Hall'),
+("""If no state has an interest in its law applying, the
+presumption that Michigan law will apply cannot be overcome. If
+a foreign state does have an interest in having its law applied,
+the court uses a “balancing approach” to “determine if Michigan’s
+interests mandate that Michigan law be applied, despite the foreign
+interests""", 'Hall'),
+("""A state has an interest in having its law applied if one of the parties is a citizen
+    of the state where the wrong occurred""", 'Burney'),
+("""The purpose of punitive damages is to
+punish wrongdoing and deter others from engaging in similar
+conduct, as opposed to compensating the plaintiff""",)
+],
 'F2013': [
 ("""“A party alleging waiver or modification must establish a
 mutual intention of the parties to waive or modify the original
@@ -94,7 +159,6 @@ party whole.""", 'Corl'),
 existing independent of the breach, exemplary damages may not be
 awarded in common-law actions brought for breach of a commercial
 contract.""", "Kewin", 'Valentine'),
-
 ],
  'F1713': [
     ("""A partnership is an association of two or more persons to be the co-owners of a business for profit.""",
@@ -250,9 +314,5 @@ certainty that the plaintiff cannot recover that amount.""", 'St Paul'),
 subject matter jurisdiction to hear claims that “arise under” the
 Constitution or other federal laws.""", '28 USC § 1331')
     ],
-
-
-
-
 
  }

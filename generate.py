@@ -52,8 +52,7 @@ coded = [
  'J1714',
  'J1804',
  'J1910',
- 'J2010']
-},
+ 'J2010']},
 {"Creditors' Rights": ['F1708', 'F1802', 'J1701', 'J1905']},
 {"Criminal Law": ['F1508',
  'F1610',
@@ -221,6 +220,8 @@ for item in coded:
         if essay in tests:
             coded_so_far.append({'test': name_of(essay), 'url': url_for(essay)})
             rules += rules_from_essays[essay]
+            if 'Choice' in topic:
+                print(rules)
             rule_accumulator = Counter([_[0] if type(_) == tuple else _ for _ in rules])
             for rule in rules:
                 if type(rule) == str:
