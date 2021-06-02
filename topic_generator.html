@@ -10,6 +10,7 @@
 </head>
 
         <h1>{{topic}}</h1>
+        {{ outline | safe }}
         Coded so far:
         {% for test in coded_so_far %}
         <br>
