@@ -10,7 +10,9 @@
 </head>
 
         <h1>{{topic}}</h1>
-        {{ outline | safe }}
+{% markdown %}
+{{ outline | safe }}
+{% endmarkdown %}
         Coded so far:
         {% for test in coded_so_far %}
         <br>

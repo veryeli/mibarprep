@@ -1,7 +1,11 @@
 from jinja2 import Environment, FileSystemLoader
 from rules import case_codes, rules_from_essays
 from collections import Counter, defaultdict
+from jinja_markdown import MarkdownExtension
+
+
 env = Environment(loader=FileSystemLoader(''))
+env.add_extension(MarkdownExtension)
 template = env.get_template('index_generator.html')
 
 
@@ -13,8 +17,8 @@ coded = [
     {'Contracts': ['F1801', 'F1211', 'J1904', 'F1114', 'F1911', 'F1006', 'F1607', 'J1703', 'F0914', 'F2013', 'F1505', 'F1306', 'J1814', 'J1504', 'F1404', 'J1404', 'J2014', 'J1015', 'J1204', 'J1104', 'J1306', 'J1604', 'F1707']}, 
     {'Corporations': ['F1412', 'F1902', 'F1809', 'J1910', 'F2005', 'J1102', 'F1302', 'J1511', 'F1102', 'F1209', 'J1008', 'J1210', 'J1413', 'J2010', 'F0913', 'J0912', 'J1303', 'J1714', 'J1804', 'F1503', 'F1003']}, 
     {"Creditors' Rights": ['F1708', 'F1802', 'J1701', 'J1905']}, 
-    {'Crim Pro': ['F1015', 'J1812', 'F1509', 'J1310', 'J1913', 'F1215', 'F1612', 'J0906', 'J1613', 'F2007', 'J1509', 'J1615', 'J1403', 'J1004', 'F1403', 'F1815', 'J1209', 'J2012', 'F1106', 'F0905', 'F1304', 'J1111', 'F1711', 'J1704', 'F1904']}, 
-    {'Criminal Law': ['F0906', 'F1104', 'F1401', 'F1710', 'J1207', 'J1915', 'F1610', 'J1401', 'J0904', 'F2008', 'J1706', 'J1311', 'F1906', 'J1110', 'J1507', 'F1213', 'F1508', 'F1311', 'J2015', 'F1814', 'J1005', 'F1014', 'J1811']}, 
+    {'Crim Pro': ['F1015', 'J1812', 'F1509', 'J1310', 'J1913', 'F1215', 'F1612', 'J0906', 'J1613', 'F2007', 'J1509', 'J1403', 'J1004', 'F1403', 'F1815', 'J1209', 'J2012', 'F1106', 'F0905', 'F1304', 'J1111', 'F1711', 'J1704', 'F1904']}, 
+    {'Criminal Law': ['F0906', 'F1104', 'F1401', 'F1710', 'J1207', 'J1615', 'J1915', 'F1610', 'J1401', 'J0904', 'F2008', 'J1706', 'J1311', 'F1906', 'J1110', 'J1507', 'F1213', 'F1508', 'F1311', 'J2015', 'F1814', 'J1005', 'F1014', 'J1811']}, 
     {'Domestic Relations': ['J1407', 'F2001', 'J1607', 'J1011', 'J1515', 'F1413', 'F1806', 'F1701', 'J1712', 'J1114', 'F1112', 'F1204', 'F1315', 'F1514', 'J1808', 'F1606', 'J0909', 'F1915', 'J1909', 'J1213', 'F0907', 'J2009', 'J1315']}, 
     {'Equity': ['F2002', 'F1913', 'F1008', 'J1209', 'J1609', 'J2001', 'J1710']}, 
     {'Evidence': ['F1115', 'J1702', 'F0904', 'F1402', 'J1505', 'J1813', 'J1606', 'F1212', 'F1912', 'F1609', 'F2015', 'F1312', 'J1305', 'F1803', 'J2011', 'J1106', 'F1506', 'J0901', 'J1402', 'J1906', 'J1014', 'F0901', 'J1206', 'F1709', 'F1005']}, 
@@ -128,10 +132,16 @@ for item in coded:
     # get outlines
     try:
         with open("%s-outline.html" % slugs[topic]) as f:
+            print("Found: %s-outline.html" % slugs[topic])
             outline = f.read()
     except IOError:
-        print("File not accessible")
-        outline = ""
+        try:
+            with open("%s-outline.md" % slugs[topic]) as f:
+                outline = f.read() 
+                print("Found: %s-outline.md" % slugs[topic])   
+        except IOError:    
+            print("File not accessible: %s-outline.md" % slugs[topic])
+            outline = ""
 
 
     output_from_parsed_template = template.render(

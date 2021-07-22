@@ -1,91 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="http://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css">
- <link href="http://fonts.googleapis.com/css?family=Nobile" rel="stylesheet" type="text/css">
-  <link href="custom.css" rel="stylesheet" type="text/css">
 
-    <title>Real Property</title>
-</head>
 
-        <h1>Real Property</h1>
-<h1>Adverse Possession</h1>
-<ul>
-<li>
-<p>Open &amp; Notorious</p>
-</li>
-<li>
-<p>Continuous</p>
-</li>
-<li>
-<p>Exclusive</p>
-</li>
-<li>
-<p>Adverse/Hostile</p>
-</li>
-</ul>
-<p>While this varies state to state, in MI mistake with &lsquo;intent to hold the true line&rsquo; does NOT count as hostile. However, after 15 years of everyone being chill about a fence, the doctrine of aquiescence works the same way.</p>
-<p># Covenants</p>
-<p>Absent contrary language, every land sales contract contains an implied covenant of marketable title</p>
-<p>The seller is not required to deliver marketable title until the closing. In an installment land contract, marketable title is not required to be given until delivery occurs after all installment payments have been made. An undisclosed private encumbrance such as a mortgage renders title unmarketable. If a seller delivers an unmarketable title, a buyer may rescind the contact and recover payments, sue for breach of contract, or bring an action for specific performance with an abatement of the purchase price (e.g. price adjustment to compensate the buyer for the defect). </p>
-<p># Easements</p>
-<p>Under common law, an easement is an interest in real property that gives a person the right to use another&rsquo;s land for a specific purpose. An easement can be created by express grant or by operation of law. An express easement must be very clear in its intent.</p>
-<p>### Recording and Notice</p>
-<p>The sale of a servient estate to a bona fide purchaser for value can make the easement unenforceable. But it has to be without notice - in the deed or properly recorded even if absent from the deed. </p>
-<p>### Easement by necessity</p>
-<p>In order for an easement by necessity to exist</p>
-<ul>
-<li>the dominant and serviant estates have to have been once owned by the same person</li>
-<li>the dominant estate must be virtually useless without the easement (necessity)</li>
-<li>the necessity must have occurred when the easement was created.</li>
-</ul>
-<h3> Easement by Prescription</h3>
+# Adverse Possession
 
-<p>An easement by prescription is similar to aquiring property by adverse possession and requires the following elements: it must be adverse/hostle (no right or permission),must be continuous and uninterrupted for at least 15 years, and it must be open or visible and notorious.</p>
-<h3>Overuse</h3>
+* Open & Notorious
 
-<p>When an easement is silent, its use cannot exceed the scope of or overburden the easement or it amounts to excessive use. In that case, the remedy is to stop the excessive use, not to terminate the easement.</p>
-<p>A prescriptive easement is generally limited in scope by the manner in which it was acquired and the previous enjoyment. </p>
-<p>But an express easement, this doesn&rsquo;t generally apply</p>
-<p>### Terminating an easement</p>
-<p>An express easement can only be terminated via express written release, merger, severance, abandonment, prescription, or estoppel. </p>
-<p>If someone tries to expand the dominant estate, that means the easement may be terminated. e.g. if you have an easement to cross plot of land A to access plot of land B, and then the owner of B aquires C which adjoins B and wants to cross A to access both B and C, that is an illegitimate use because it expands the dominant estate.</p>
-<h1>Fixtures</h1>
-<p>Fructis naturales are wild crops that grow on the land. They are considered real property and pass with the land.</p>
-<h1>Ownership of real property</h1>
-<h2>Present Estates and Future Interests</h2>
-<p>OK so the whole thing is the fee simple absolute. Basiclaly this is my property indefinitely. But sometimes there&rsquo;s a way for someone else to take it.</p>
-<h2>Present Estates</h2>
-<p>Life estate is when someone has the property for their life until they die, then it reverts to someone else. Life estate por autre vie is a life estate for someone else&rsquo;s life. I&rsquo;d imagine like, if someone wants to leave their historic family home to a museaum, but his wife is living in it with their son, and he wants the son to own it until the wife dies then set out on his own two feet, he might give a life estate por autre vie or whatever to his son for the life of his wife.</p>
-<p><br></p>
-<p>OK if grantor Greg gives his property to Sophie with remainder to Renee, if Renee survives Sophie then</p>
+* Continuous
+
+* Exclusive
+
+* Adverse/Hostile
+
+  While this varies state to state, in MI mistake with 'intent to hold the true line' does NOT count as hostile. However, after 15 years of everyone being chill about a fence, the doctrine of aquiescence works the same way.
+
+  # Covenants
+
+  Absent contrary language, every land sales contract contains an implied covenant of marketable title
+
+  The seller is not required to deliver marketable title until the closing. In an installment land contract, marketable title is not required to be given until delivery occurs after all installment payments have been made. An undisclosed private encumbrance such as a mortgage renders title unmarketable. If a seller delivers an unmarketable title, a buyer may rescind the contact and recover payments, sue for breach of contract, or bring an action for specific performance with an abatement of the purchase price (e.g. price adjustment to compensate the buyer for the defect). 
+
+  # Easements
+
+  Under common law, an easement is an interest in real property that gives a person the right to use another's land for a specific purpose. An easement can be created by express grant or by operation of law. An express easement must be very clear in its intent.
+
+  ### Recording and Notice
+
+  The sale of a servient estate to a bona fide purchaser for value can make the easement unenforceable. But it has to be without notice - in the deed or properly recorded even if absent from the deed. 
+
+  ### Easement by necessity
+
+  In order for an easement by necessity to exist
+
+  * the dominant and serviant estates have to have been once owned by the same person
+  * the dominant estate must be virtually useless without the easement (necessity)
+  * the necessity must have occurred when the easement was created.
+
+  <h3> Easement by Prescription</h3>
+
+  An easement by prescription is similar to aquiring property by adverse possession and requires the following elements: it must be adverse/hostle (no right or permission),must be continuous and uninterrupted for at least 15 years, and it must be open or visible and notorious.
+
+  <h3>Overuse</h3>
+
+  When an easement is silent, its use cannot exceed the scope of or overburden the easement or it amounts to excessive use. In that case, the remedy is to stop the excessive use, not to terminate the easement.
+
+  A prescriptive easement is generally limited in scope by the manner in which it was acquired and the previous enjoyment. 
+
+  But an express easement, this doesn't generally apply
+
+  ### Terminating an easement
+
+  An express easement can only be terminated via express written release, merger, severance, abandonment, prescription, or estoppel. 
+
+  If someone tries to expand the dominant estate, that means the easement may be terminated. e.g. if you have an easement to cross plot of land A to access plot of land B, and then the owner of B aquires C which adjoins B and wants to cross A to access both B and C, that is an illegitimate use because it expands the dominant estate.
+
+# Fixtures
+
+Fructis naturales are wild crops that grow on the land. They are considered real property and pass with the land.
+
+# Ownership of real property
+
+
+## Present Estates and Future Interests
+
+OK so the whole thing is the fee simple absolute. Basiclaly this is my property indefinitely. But sometimes there's a way for someone else to take it.
+
+## Present Estates
+
+Life estate is when someone has the property for their life until they die, then it reverts to someone else. Life estate por autre vie is a life estate for someone else's life. I'd imagine like, if someone wants to leave their historic family home to a museaum, but his wife is living in it with their son, and he wants the son to own it until the wife dies then set out on his own two feet, he might give a life estate por autre vie or whatever to his son for the life of his wife.
+
+<br>
+
+OK if grantor Greg gives his property to Sophie with remainder to Renee, if Renee survives Sophie then
+
 <ul> 
-    <li> Sophie has a life estate that is possessory </li>
-    <li> Renee has a future interest that will be possessory if she lives longer than Sophie. Also it will be a fee simple absolute. </li>
-    <li> Greg has a furture interest that will be posessorry if she doesn't. Also that would then be a fee simple absolute. ANnd also a reversion. </li>
+	<li> Sophie has a life estate that is possessory </li>
+	<li> Renee has a future interest that will be possessory if she lives longer than Sophie. Also it will be a fee simple absolute. </li>
+	<li> Greg has a furture interest that will be posessorry if she doesn't. Also that would then be a fee simple absolute. ANnd also a reversion. </li>
 </ul>
 
-<h2>Future Interests</h2>
+
+
+## Future Interests
+
 <h3> Retained by grantor</h3>
 
-<p>The three types of future interests are </p>
+The three types of future interests are 
+
 <ul>
-    <li> reversion </li>
-    <li> right of reverter </li>
-    <li> right of reentry </li>
+	<li> reversion </li>
+	<li> right of reverter </li>
+	<li> right of reentry </li>
 </ul>
 
-<p>Reversion happens when a finite estate, like a life estate, ends. So it goes back to whoever granted it.</p>
-<p>Right of reverter happens when the grantor grants some property but it&rsquo;s subject to a condition that may or may not occur (not finite). When property is conveyed with a right of reverter, it is a fee simple determinable. If I give you land to make a communue, but you become a venture capitalist and don&rsquo;t make a communue, the land reverts to me.</p>
-<p>Right of reentry is like a right of reverter except there&rsquo;s an option to re-take rather than it happening automatically. It requires a court order. Also, I think maybe, it&rsquo;s what automatically happens when what would otherwise be a reversion makes the property go to someone other than the grantor? Anyway this is called a fee simple defesable subject to a condition subsequent.</p>
+
+Reversion happens when a finite estate, like a life estate, ends. So it goes back to whoever granted it.
+
+Right of reverter happens when the grantor grants some property but it's subject to a condition that may or may not occur (not finite). When property is conveyed with a right of reverter, it is a fee simple determinable. If I give you land to make a communue, but you become a venture capitalist and don't make a communue, the land reverts to me.
+
+Right of reentry is like a right of reverter except there's an option to re-take rather than it happening automatically. It requires a court order. Also, I think maybe, it's what automatically happens when what would otherwise be a reversion makes the property go to someone other than the grantor? Anyway this is called a fee simple defesable subject to a condition subsequent.
+
 <h3> Given to grantee </h3>
 
-<p>OK so these three are </p>
+OK so these three are 
+
 <ul>
-    <li> Vested Remainder</li>
-    <li> Contingent remainder </li>
-    <li> Executory interest</li>
+	<li> Vested Remainder</li>
+	<li> Contingent remainder </li>
+	<li> Executory interest</li>
 
 
 
@@ -287,15 +307,3 @@ So imagine idk a shell closing around to X and X's heirs, and the shell is just 
 # The rule of Convenience
 
 The rule of convenience dictates that a class should close as soon as any member of the class becomes entitled to take a gift
-        Coded so far:
-        
-
-    <container>
-        <div class='row'>
-        
-    </div>
-    
-    </container>
-</div>
-</body>
-</html>
